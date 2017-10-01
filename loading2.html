@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>圆形加载动画</title>
+  <style type="text/css">
+  	.load {
+    margin:10px auto;
+    height: 100px;
+    width: 100px;
+   
+    border-radius: 60px;
+    border-left:10px solid red;
+    border-top:10px solid #FFAEB9;
+    border-right:10px solid #FFAEB9;
+    border-bottom:10px solid #FFAEB9;
+    animation: load 1s infinite linear;
+   
+}
+@keyframes load{
+  0%{
+    transform:rotate(0deg);
+  }
+   100%{
+     transform:rotate(360deg);
+  }
+  
+  
+}
+
+  </style>
+</head>
+<body>
+<div class="load"></div>
+</body>
+</html>

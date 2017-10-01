@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>加载动画一</title>
+  <style type="text/css">
+  	
+  	.load{
+  margin:100px auto;
+  position:relative;
+  
+}
+.load:before{
+  left:-15px;
+ 
+}
+.load:after{
+  left:15px;
+ }
+
+.load, .load:before, .load:after{
+  width:10px;
+  height:30px;
+  background: #000;
+  animation: load 1s infinite ease-in-out;
+   
+}
+.load:before, .load:after {
+    position: absolute;
+    top: 0;
+    content: '';
+}
+
+.load:after{
+    animation-delay: 0.33s;
+}
+.load:before{
+    animation-delay: -0.33s;
+}
+
+@keyframes load{
+  0%, 80%, 100% {
+    box-shadow: 0 0 #000;
+    height: 30px;
+  }
+
+  10% {
+    box-shadow: 0 -20px #000;
+    height: 40px;
+
+  }
+  
+}
+
+
+  </style>
+</head>
+<body>
+<div class="load"></div>
+</body>
+</html>
